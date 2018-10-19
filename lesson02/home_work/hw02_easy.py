@@ -13,13 +13,34 @@
 
 # Подсказка: воспользоваться методом .format()
 
+fruits_list = ['Абрикос', 'Персик', "Слива", "Груша", "Арбуз", "Дыня"]
+for fruit_index, fruit_name in enumerate(fruits_list, start=1):
+    print(fruit_index, "{:>7}".format(fruit_name))
+
 
 # Задача-2:
 # Даны два произвольные списка.
 # Удалите из первого списка элементы, присутствующие во втором списке.
-
+list1 = ['dog', 7, 'apple', 444, 3.45]
+list2 = ['dog', 444, 3.45]
+print(list1)
+print(list2)
+for val in list2:
+    if val in list1:
+        list1.remove(val)
+print(list1)
+print(list2)
 
 # Задача-3:
 # Дан произвольный список из целых чисел.
 # Получите НОВЫЙ список из элементов исходного, выполнив следующие условия:
 # если элемент кратен двум, то разделить его на 4, если не кратен, то умножить на два.
+first_list = [2, 12, 3, 15, 44, 73]
+new_list = []
+val = len(first_list)
+for i in range(val):
+    if first_list[i] % 2 == 0:
+        new_list.append(first_list[i] / 4)
+    else:
+        new_list.append(first_list[i] * 2)
+print(new_list)
